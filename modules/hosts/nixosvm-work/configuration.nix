@@ -13,6 +13,7 @@ flake.nixosModules.workVm = { pkgs, ... }:
     self.nixosModules.base
     self.nixosModules.kvmGuest
     self.nixosModules.printing
+    self.nixosModules.homeManager
 
     # Desktop
     self.nixosModules.gnome
@@ -23,6 +24,8 @@ flake.nixosModules.workVm = { pkgs, ... }:
     self.nixosModules.neovim
     self.nixosModules.firefox
     self.nixosModules.zeditor
+    self.nixosModules.zsh
+    self.nixosModules.starship
   ];
 
   boot.loader.grub= {

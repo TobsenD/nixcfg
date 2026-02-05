@@ -5,6 +5,7 @@
       isNormalUser = true;
       description = "Tobias Dols";
       extraGroups = [ "networkmanager" "wheel" ];
+      shell = pkgs.zsh;
     };
 
   };
