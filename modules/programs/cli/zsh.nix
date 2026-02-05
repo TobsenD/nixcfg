@@ -18,7 +18,7 @@
         history.size = 10000;
 
         initContent = ''
-          export NIX_PATH=nixpkgs=channel:unstable
+          export NIX_PATH=nixpkgs=channel:nixos-unstable
           export NIX_LOG=info
           eval "$(starship init zsh)"
         '';
