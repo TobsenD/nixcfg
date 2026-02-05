@@ -1,12 +1,12 @@
 {inputs, self, ... }:
 {
-  flake.nixosConfigurations.nixosvm = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.nixosWork = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.nixosModules.hostVm
+      self.nixosModules.workVm
     ];
   };
 
-flake.nixosModules.hostVm = { pkgs, ... }:
+flake.nixosModules.workVm = { pkgs, ... }:
 {
   imports = [
     self.nixosModules.base
