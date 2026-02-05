@@ -26,6 +26,7 @@ flake.nixosModules.workVm = { pkgs, ... }:
     self.nixosModules.zeditor
     self.nixosModules.zsh
     self.nixosModules.starship
+    self.nixosModules.chats
   ];
 
   boot.loader.grub= {
