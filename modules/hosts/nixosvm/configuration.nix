@@ -10,13 +10,24 @@
     { pkgs, ... }:
     {
       imports = [
+        # System
         self.nixosModules.base
         self.nixosModules.kvmGuest
         self.nixosModules.printing
+        self.nixosModules.homeManager
+
+        # Desktop
         self.nixosModules.gnome
-        self.nixosModules.firefox
+        self.nixosModules.theme
+
+        # Software
         self.nixosModules.git
         self.nixosModules.neovim
+        self.nixosModules.firefox
+        self.nixosModules.zeditor
+        self.nixosModules.zsh
+        self.nixosModules.starship
+        self.nixosModules.chats
       ];
 
       boot.loader.grub = {
@@ -34,6 +45,11 @@
         "nix-command"
         "flakes"
       ];
+
+      environment.variables = {
+        ZED_ALLOW_EMULATED_GPU = 1;
+      };
+
 
       system.stateVersion = "25.11";
     };
