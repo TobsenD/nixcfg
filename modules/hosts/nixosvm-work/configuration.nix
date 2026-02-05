@@ -9,13 +9,20 @@
 flake.nixosModules.workVm = { pkgs, ... }:
 {
   imports = [
+    # System
     self.nixosModules.base
     self.nixosModules.kvmGuest
     self.nixosModules.printing
+
+    # Desktop
     self.nixosModules.gnome
-    self.nixosModules.firefox
+    self.nixosModules.theme
+
+    # Software
     self.nixosModules.git
     self.nixosModules.neovim
+    self.nixosModules.firefox
+    self.nixosModules.zeditor
   ];
 
   boot.loader.grub= {
