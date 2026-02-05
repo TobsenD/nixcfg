@@ -41,6 +41,10 @@ flake.nixosModules.workVm = { pkgs, ... }:
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
+  environment.variables ={
+     ZED_ALLOW_EMULATED_GPU=1;
+  };
+
   system.stateVersion = "25.11";
 };
 

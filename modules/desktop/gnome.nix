@@ -1,15 +1,9 @@
 {
   flake.nixosModules.gnome = {pkgs, ... }: {
 
-    services.xserver = {
-      enable = true;
+    services = {
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
-      xkb = {
-      layout = "de";
-      variant = "";
-      };
     };
-
   };
 }
