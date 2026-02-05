@@ -1,12 +1,17 @@
 {
-  flake.nixosModules.base = {pkgs, ... }: {
+  flake.nixosModules.base =
+    { pkgs, ... }:
+    {
 
-    users.users.tobsend = {
-      isNormalUser = true;
-      description = "Tobias Dols";
-      extraGroups = [ "networkmanager" "wheel" ];
-      shell = pkgs.zsh;
+      users.users.tobsend = {
+        isNormalUser = true;
+        description = "Tobias Dols";
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+        ];
+        shell = pkgs.zsh;
+      };
+
     };
-
-  };
 }

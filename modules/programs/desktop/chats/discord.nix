@@ -1,7 +1,9 @@
 {
-  flake.chats.discord = {pkgs, ... }: {
-    environment.systemPackages = [
+  flake.chats.discord =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = [
         pkgs.discord
       ];
-  };
+    };
 }
