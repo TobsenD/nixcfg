@@ -1,6 +1,11 @@
 {
   flake.nixosModules.base =
-    { pkgs, ... }:
+    {
+      lib,
+      inputs,
+      pkgs,
+      ...
+    }:
     {
 
       nix = {
@@ -9,19 +14,11 @@
         gc = {
           automatic = true;
           dates = "weekly";
-          options = {
-            keepDerivations = true;
-            keepOutputs = true;
-          };
+          options = "--keep-derivations --keep-outputs";
         };
 
         # automatic optimisation of the Nix store
         optimise.automatic = true;
-
-        # flake registry settings
-        registry = (lib.mapAttrs (_: flake: { inherit flake; })) (
-          (lib.filterAttrs (_: lib.isType "flake")) inputs
-        );
 
         #Allows old-style Nix commands (e.g. nix-shell without flakes)
         nixPath = [ "/etc/nix/path" ];
