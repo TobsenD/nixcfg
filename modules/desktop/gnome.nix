@@ -1,8 +1,7 @@
 {
   flake.nixosModules.gnome =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     {
-
       services = {
         displayManager.gdm.enable = true;
         desktopManager.gnome.enable = true;
@@ -20,5 +19,21 @@
           tali # poker game
         ]
       );
+
+      environment.systemPackages = with pkgs; [
+        gnomeExtensions.gsconnect
+      ];
+
+      home-manager.users.tobsend = {
+        dconf = {
+          settings = {
+            "org/gnome/shell" = {
+              enabled-extensions = [
+                pkgs.gnomeExtensions.gsconnect.extensionUuid
+              ];
+            };
+          };
+        };
+      };
     };
 }

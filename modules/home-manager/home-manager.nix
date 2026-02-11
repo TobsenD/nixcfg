@@ -9,7 +9,7 @@
     home-manager.users.tobsend = {
       programs.home-manager.enable = true;
       home.stateVersion = "25.11";
+      dconf.enable = true;
     };
-
   };
 }
