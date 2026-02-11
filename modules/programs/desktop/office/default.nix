@@ -5,6 +5,7 @@
       joplin
       joplin-cli
       libreoffice
+      thunderbird
     ];
   };
 }
