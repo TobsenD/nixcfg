@@ -15,6 +15,7 @@
               nil
               nixpkgs-fmt
               gcc
+              fd
             ];
 
             sessionVariables = {
