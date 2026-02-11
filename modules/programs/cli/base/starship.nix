@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.starship =
+  flake.base-cli.starship =
     { pkgs, ... }:
     {
       home-manager.users.tobsend = {

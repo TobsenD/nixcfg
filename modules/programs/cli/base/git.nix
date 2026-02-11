@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.git =
+  flake.base-cli.git =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [

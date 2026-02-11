@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.neovim =
+  flake.base-cli.neovim =
     { config, pkgs, ... }:
     {
 

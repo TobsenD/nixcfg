@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.zsh =
+  flake.base-cli.zsh =
     { pkgs, ... }:
     {
 
