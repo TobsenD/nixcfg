@@ -28,6 +28,8 @@
         self.nixosModules.zsh
         self.nixosModules.starship
         self.nixosModules.chats
+        self.nixosModules.gaming
+        self.nixosModules.office
       ];
 
       boot.loader.grub = {
@@ -49,7 +51,6 @@
       environment.variables = {
         ZED_ALLOW_EMULATED_GPU = 1;
       };
-
 
       system.stateVersion = "25.11";
     };

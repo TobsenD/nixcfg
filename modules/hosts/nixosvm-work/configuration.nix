@@ -28,6 +28,7 @@
         self.nixosModules.zsh
         self.nixosModules.starship
         self.nixosModules.chats
+        self.nixosModules.office
       ];
 
       boot.loader.grub = {
