@@ -5,6 +5,7 @@
       godot
       jdk
       misc
+      podman
     ];
   };
 }
