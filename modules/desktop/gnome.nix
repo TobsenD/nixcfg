@@ -22,6 +22,9 @@
 
       environment.systemPackages = with pkgs; [
         gnomeExtensions.gsconnect
+        gnomeExtensions.alphabetical-app-grid
+        gnomeExtensions.caffeine
+        gnomeExtensions.removable-drive-menu
       ];
 
       home-manager.users.tobsend = {
@@ -30,6 +33,9 @@
             "org/gnome/shell" = {
               enabled-extensions = [
                 pkgs.gnomeExtensions.gsconnect.extensionUuid
+                pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
+                pkgs.gnomeExtensions.caffeine.extensionUuid
+                pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
               ];
             };
           };
