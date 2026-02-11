@@ -26,6 +26,7 @@
         self.nixosModules.zeditor
         self.nixosModules.chats
         self.nixosModules.office
+        self.development.misc
       ];
 
       boot.loader.grub = {

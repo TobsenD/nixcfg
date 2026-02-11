@@ -27,6 +27,7 @@
         self.nixosModules.chats
         self.nixosModules.gaming
         self.nixosModules.office
+        self.nixosModules.development
       ];
 
       boot.loader.grub = {
