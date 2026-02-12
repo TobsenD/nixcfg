@@ -5,6 +5,7 @@
       ansible
       godot
       jdk
+      kube
       misc
       platformio
       podman

@@ -15,6 +15,7 @@
           shellAliases = {
             ll = "ls -la";
             vim = "nvim";
+            k = "kubectl";
           };
 
           history.size = 10000;
