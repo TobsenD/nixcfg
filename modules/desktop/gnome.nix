@@ -27,19 +27,38 @@
         gnomeExtensions.removable-drive-menu
       ];
 
-      home-manager.users.tobsend = {
-        dconf = {
-          settings = {
-            "org/gnome/shell" = {
-              enabled-extensions = [
-                pkgs.gnomeExtensions.gsconnect.extensionUuid
-                pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
-                pkgs.gnomeExtensions.caffeine.extensionUuid
-                pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
-              ];
+      home-manager.users.tobsend =
+        { config, ... }:
+        {
+          dconf = {
+            settings = {
+              "org/gnome/shell" = {
+                enabled-extensions = [
+                  pkgs.gnomeExtensions.gsconnect.extensionUuid
+                  pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
+                  pkgs.gnomeExtensions.caffeine.extensionUuid
+                  pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
+                ];
+              };
+            };
+          };
+
+          xdg = {
+            configFile = {
+              "autostart/firefox.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/firefox.desktop";
+              "autostart/thunderbird.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/thunderbird.desktop";
+              "autostart/element.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/element.desktop";
+              "autostart/signal.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/signal.desktop";
+              "autostart/discord.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/discord.desktop";
+              "autostart/synology.desktop".source =
+                "/home/tobsend/Development/nix-dotfiles/autostart/synology.desktop";
             };
           };
         };
-      };
     };
 }
