@@ -12,8 +12,7 @@
       imports = [
         # System
         self.nixosModules.base
-        self.nixosModules.baseCli
-        self.nixosModules.kvmGuest
+        self.nixosModules.base-cli
         self.nixosModules.printing
         self.nixosModules.homeManager
 
@@ -32,12 +31,10 @@
         self.nixosModules.sdc
         self.nixosModules.obs
       ];
-o =
-      boot.loader.grub = {
-        enable = true;
-        device = "tbd";
-        useOSProber = true;
-      };
+      
+      # Bootloader.
+      boot.loader.systemd-boot.enable = true;
+      boot.loader.efi.canTouchEfiVariables = true;
       boot.kernelPackages = pkgs.linuxPackages_latest;
 
       networking.hostName = "dev-laptop";

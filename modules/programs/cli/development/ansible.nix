@@ -7,4 +7,5 @@
         ansible-lint
       ];
     };
+}
 

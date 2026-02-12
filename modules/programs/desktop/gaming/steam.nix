@@ -3,7 +3,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = [
-        pkgs.gaming
+        pkgs.steam
       ];
     };
 }
