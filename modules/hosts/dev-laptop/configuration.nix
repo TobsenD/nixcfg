@@ -21,12 +21,15 @@
         self.nixosModules.gnome
         self.nixosModules.theme
 
-        # Software
+        # Software Bundles
         self.nixosModules.browsers
         self.nixosModules.chats
         self.nixosModules.gaming
         self.nixosModules.office
         self.nixosModules.development
+
+        # Software
+        self.nixosModules.sdc
       ];
 
       boot.loader.grub = {
