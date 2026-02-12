@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.firefox =
+  flake.browsers.firefox =
     { pkgs, ... }:
     {
 
