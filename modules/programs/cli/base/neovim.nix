@@ -25,7 +25,7 @@
           };
 
           xdg.configFile."nvim" = {
-            source = config.lib.file.mkOutOfStoreSymlink "/home/tobsend/nix-dotfiles/nvim/";
+            source = config.lib.file.mkOutOfStoreSymlink "/home/tobsend/Development/nix-dotfiles/nvim/";
             recursive = true;
           };
         };
