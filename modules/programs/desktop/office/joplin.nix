@@ -3,7 +3,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = [
-        pkgs.joplin
+        pkgs.joplin-desktop
       ];
     };
 }
