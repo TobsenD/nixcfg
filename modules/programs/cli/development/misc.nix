@@ -12,6 +12,8 @@
         go
         python3
         nixfmt
+        maven
+        gradle
       ];
     };
 }
