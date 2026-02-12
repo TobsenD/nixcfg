@@ -24,6 +24,7 @@
         self.nixosModules.browsers
         self.nixosModules.chats
         self.nixosModules.gaming
+        self.nixosModules.graphics
         self.nixosModules.office
         self.nixosModules.development
 
