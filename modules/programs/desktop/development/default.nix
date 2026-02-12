@@ -6,6 +6,7 @@
       godot
       jdk
       misc
+      platformio
       podman
     ];
   };
