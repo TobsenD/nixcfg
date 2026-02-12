@@ -22,7 +22,7 @@
         self.nixosModules.theme
 
         # Software
-        self.nixosModules.firefox
+        self.nixosModules.browsers
         self.nixosModules.zeditor
         self.nixosModules.chats
         self.nixosModules.gaming
