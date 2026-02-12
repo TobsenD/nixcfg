@@ -30,8 +30,9 @@
         # Software
         self.nixosModules.sdc
         self.nixosModules.obs
+        self.nixosModules.keepassxc
       ];
-      
+
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
