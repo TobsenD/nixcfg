@@ -30,8 +30,9 @@
 
         # Software
         self.nixosModules.sdc
+        self.nixosModules.obs
       ];
-
+o =
       boot.loader.grub = {
         enable = true;
         device = "tbd";
