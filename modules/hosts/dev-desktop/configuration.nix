@@ -32,6 +32,7 @@
         self.nixosModules.sdc
         self.nixosModules.obs
         self.nixosModules.keepassxc
+        self.nixosModules.virtualization
       ];
 
       # Bootloader.
