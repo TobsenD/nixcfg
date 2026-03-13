@@ -6,6 +6,7 @@
       starship
       zsh
       git
+      btop
     ];
   };
 }
